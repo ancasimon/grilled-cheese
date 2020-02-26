@@ -6,6 +6,7 @@
 
 import util from '../helpers/util.js';
 import breadData from '../helpers/data/breadData.js';
+import sandwich from './sandwich.js';
 
 //forEach loop - takes the current thing you are on/you name it whatever you want to name it (second set of parentheses {this is the equivalent of the [i] in the regular for loop} and then specifies a condition ) - can doit only with arrays of objects (not html collections!!)
 
@@ -16,6 +17,7 @@ import breadData from '../helpers/data/breadData.js';
 const selectBread = (e) => {
     const breadId = e.target.id;
     breadData.setSelectedBread(breadId);
+    sandwich.sandwichMaker();
 };
 
 const radioButtonEvent = (e) => {

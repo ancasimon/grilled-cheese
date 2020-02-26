@@ -2,20 +2,20 @@ const cheeses = [
     {
         id: "swiss",
         type: "Swiss",
-        color: "white",
-        price: .50
+        color: 'cornsilk',
+        price: 0.5
     },
     {
         id: "blue",
-        type: "Blue Cheese",
-        color: "light blue",
+        type: "Blue",
+        color: 'blue',
         price: 1
     },
     {
         id: "american",
         type: "American",
-        color: "Yellow",
-        price: .50
+        color: '#FFB90F',
+        price: 0.5
     }
 ];
 
