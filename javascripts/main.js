@@ -9,9 +9,11 @@
 // init function lives here!!
 
 import breads from './components/breads.js';
+import cheeses from './components/cheeses.js';
 
 const init = () => {
     breads.makeBreadSelection();
+    cheeses.makeCheeseSelection();
 };
 
 init();
