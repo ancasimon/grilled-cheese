@@ -29,7 +29,7 @@ const makeBreadSelection  = () => {
     const allBreads = breadData.getBreads();
     let domString = '';
     for (let i=0; i < allBreads.length; i++) {
-        domString += '<div class="form-check form-check-inline">';
+        domString += '<div class="form-check form-check-inline mx-md-5">';
             domString += `<input class="form-check-input breadRadio" type="radio" name="inlineRadioOptions" id="${allBreads[i].id}" value="option1">`;
             domString += `<label class="form-check-label" for="${allBreads[i].id}">${allBreads[i].type}</label>`;
         domString += '</div>';
