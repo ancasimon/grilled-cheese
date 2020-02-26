@@ -19,23 +19,19 @@ const cheeses = [
     }
 ];
 
-let selectedCheeseList = [];
-
-let selectedCheeseId = '';
+const selectedCheeseList = [];
 
 const setSelectedCheese = (cheeseId) => {
-    selectedCheeseId = cheeseId; 
-    console.log(selectedCheeseId);
+    const foundCheese = cheeses.find((currentCheeseItem) => currentCheeseItem.id === cheeseId);
+    selectedCheeseList.push(foundCheese);
 };
-
-// selectedCheeseList.push(selectedCheeseId);
 
 const getCheeses = () => {
     return cheeses;
 };
 
-// const setSelectedCheeseList = () => {
-//     return selectedCheeseList;
-// }
+const getSelectedCheeseList = () => {
+    return selectedCheeseList;
+};
 
-export default { setSelectedCheese, getCheeses };
+export default { getCheeses, setSelectedCheese, getSelectedCheeseList };

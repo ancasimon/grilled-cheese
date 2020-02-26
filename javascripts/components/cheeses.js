@@ -4,6 +4,7 @@ import cheeseData from '../helpers//data/cheeseData.js';
 const selectCheese = (e) => {
     const cheeseId = e.target.id;
     cheeseData.setSelectedCheese(cheeseId);
+    console.log(cheeseData.getSelectedCheeseList());
 };
 
 const addCheeseButtonEvent = (e) => {
@@ -17,7 +18,7 @@ const makeCheeseSelection  = () => {
     const allCheeses = cheeseData.getCheeses();
     let domString = '';
     for (let i=0; i < allCheeses.length; i++) {
-        domString += `<button class="btn btn-primary cheeseButton" id="${allCheeses[i].id}" type="submit">${allCheeses[i].type}</button>`;
+        domString += `<button class="btn btn-primary px-md-5 mx-md-2 cheeseButton" id="${allCheeses[i].id}" type="submit">${allCheeses[i].type}</button>`;
     }
     util.printToDom('cheese-container', domString);
     addCheeseButtonEvent();
