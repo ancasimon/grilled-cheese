@@ -6,19 +6,19 @@
 const breads = [
 {
     type: "White",
-    color: '#fff',
+    color: 'white',
     price: 1,
     id: "white"
 },
 {
     type: "Wheat",
-    color: '#A52A2A',
+    color: '#F5DEB3',
     price: 1,
     id: "wheat"
 },
 {
     type: "Rye",
-    color: '#D2691E',
+    color: '#DEB887',
     price: 1,
     id: "rye"
 }
@@ -31,8 +31,13 @@ const setSelectedBread = (breadId) => {
     console.log('selectedBreadId', selectedBreadId);
 };
 
+const getSelectedBread = () => {
+    const foundBread = breads.find((currentBreadItem) => currentBreadItem.id === selectedBreadId);
+    return foundBread;
+};
+
 const getBreads = () => {
     return breads;
 };
 
-export default { setSelectedBread, getBreads };
+export default { setSelectedBread, getBreads, getSelectedBread };

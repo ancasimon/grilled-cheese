@@ -1,9 +1,11 @@
 import util from '../helpers/util.js';
 import cheeseData from '../helpers//data/cheeseData.js';
+import sandwich from './sandwich.js';
 
 const selectCheese = (e) => {
     const cheeseId = e.target.id;
     cheeseData.setSelectedCheese(cheeseId);
+    sandwich.sandwichMaker();
     console.log(cheeseData.getSelectedCheeseList());
 };
 
@@ -18,7 +20,7 @@ const makeCheeseSelection  = () => {
     const allCheeses = cheeseData.getCheeses();
     let domString = '';
     for (let i=0; i < allCheeses.length; i++) {
-        domString += `<button class="btn btn-primary px-md-5 mx-md-2 cheeseButton" id="${allCheeses[i].id}" type="submit">${allCheeses[i].type}</button>`;
+        domString += `<button class="btn btn-primary px-md-2 mx-md-2 cheeseButton" id="${allCheeses[i].id}" type="submit">${allCheeses[i].type}</button>`;
     }
     util.printToDom('cheese-container', domString);
     addCheeseButtonEvent();
